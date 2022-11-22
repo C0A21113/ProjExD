@@ -55,7 +55,6 @@ if __name__ == "__main__":
             break
         else:
             print("-"*10)
-
-
+            
     ed = time.time()
     print(f"所要時間：{(ed-st):.2f}秒")
