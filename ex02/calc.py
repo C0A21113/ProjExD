@@ -10,10 +10,6 @@ def button_click(event):
         res = eval(siki)
         entry.delete(0, tk.END)
         entry.insert(tk.END, res)
-    #else:
-    #tkm.showinfo("", f"{num}ボタンがクリックされました")
-     #   entry.insert(tk.END, num)
-
     elif num == "AC":
         entry.delete(0, tk.END)
     else:
@@ -45,5 +41,5 @@ for ope in operators:
     if c%3 == 0:
         r += 1
         c = 0
-        
+
 root.mainloop()
