@@ -36,7 +36,7 @@ for num in range(9, -1, -1):
         r += 1
         c = 0
 
-operators = ["+", "=", "-", "*", "/"] #四則演算の追加
+operators = ["+", "=", "-", "*", "/", "AC", "√", "."] #四則演算,オールクリア、ルート、小数点の追加
 for ope in operators:
     button = tk.Button(root, text=f"{ope}", width=4, height=1, font=("", 30), bg="black", fg="white") #ボタンの色の変更
     button.grid(row=r, column=c)
@@ -45,15 +45,5 @@ for ope in operators:
     if c%3 == 0:
         r += 1
         c = 0
-
-ope = ["AC", "√", "."] #削除,ルート,小数点の追加
-for op in ope:
-    button = tk.Button(root, text=f"{op}", width=4, height=1, font=("", 30), bg="black", fg="white") #ボタンの色の変更
-    button.grid(row=r, column=c)
-    button.bind("<1>", button_click)
-    c += 1
-    if c%3 == 0:
-        r += 1
-        c = 0
-
+        
 root.mainloop()
