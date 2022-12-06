@@ -61,19 +61,15 @@ if __name__ == "__main__":
     root = tk.Tk()
     label = tk.Label(root, text="-", font=("", 80))
     label.pack()
-
     tmr = 0
     jid = None
-
     maze_list = mm.make_maze(15, 9)
     mm.show_maze(canvas, maze_list)
-
     mx, my = 1, 1
     cx, cy = mx*100+50, my*100+50
     yakitori = tk.PhotoImage(file="fig/3.png") # 画像の変更
     canvas.create_image(cx, cy, image=yakitori, tag="kokaton")
     canvas.pack()
-
     key = ""
     root.bind("<KeyPress>", key_down)
     root.bind("<KeyRelease>", key_up)
