@@ -1,8 +1,6 @@
 import tkinter as tk
 import maze_maker as mm
 import tkinter.messagebox as tkm
-import random
-
 
 def count_up(): #矢印キーを押してから計測開始
     global tmr
