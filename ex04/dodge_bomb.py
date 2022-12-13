@@ -35,6 +35,7 @@ def main():
     bomb_rct.centerx = random.randint(0, scrn_rct.width)
     bomb_rct.centery = random.randint(0, scrn_rct.height)
     scrn_sfc.blit(bomb_sfc, bomb_rct)
+
     #ボールを増やす
     bomb_sfc1 = pg.Surface((20, 20)) 
     bomb_sfc1.set_colorkey((0, 0, 0)) 
@@ -51,6 +52,7 @@ def main():
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 return
+
         #こうかとんの移動定義
         #wasdでも移動できるように設定
         key_dct = pg.key.get_pressed()
@@ -62,6 +64,7 @@ def main():
             tori_rct.centerx -= 1
         if key_dct[pg.K_RIGHT] or key_dct[pg.K_d]:
             tori_rct.centerx += 1
+            
         #Spaceが押されたら加速
         if key_dct[pg.K_UP] and key_dct[pg.K_SPACE]:    
             tori_rct.centery -= 5
