@@ -190,7 +190,6 @@ def main():
     bkd2 = Bomb((0, 255, 0), 30, (+1.7, +1.7), scr)
     enm = Enemy("fig/enemy.gif", 2.0, (800, 100), (+1, +1))
 
-
     # 練習２
     while True:        
         scr.blit()
