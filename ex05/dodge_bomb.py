@@ -90,8 +90,11 @@ def main():
     kkt.update(scr)
 
     # 練習５
-    bkd = Bomb((255, 0, 0), 10, (+1, +1), scr)
-    bkd.update(scr)
+    bkd_list = []
+    for _ in range(5):    
+        bkd = Bomb((255, 0, 0), 10, (+1, +1), scr)
+        bkd_list.append(bkd)
+    # bkd.update(scr)
 
     # 練習２
     while True:        
@@ -102,7 +105,9 @@ def main():
                 return
 
         kkt.update(scr)
-        bkd.update(scr)
+        for i in range(5):
+            bkd_list[i].update(scr)
+            bkd.update(scr)
         if kkt.rct.colliderect(bkd.rct):
             return
 
