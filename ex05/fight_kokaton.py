@@ -133,9 +133,7 @@ def load_image(file):
         raise SystemExit('Could not load image "%s" %s' % (file, pg.get_error()))
     return surface.convert()
 
-
 main_dir = os.path.split(os.path.abspath(__file__))[0]
-
 
 def load_sound(file): # BGM追加
     if not pg.mixer:
